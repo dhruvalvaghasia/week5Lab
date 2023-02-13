@@ -12,8 +12,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import models.User;
 
 /**
  *
@@ -21,19 +19,7 @@ import models.User;
  */
 @WebServlet(name = "LoginServlet", urlPatterns = {"/LoginServlet"})
 public class LoginServlet extends HttpServlet {
-    @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
 
-        HttpSession session = request.getSession();
-
-        User user = (User) session.getAttribute("User");
-
-        String link = request.getParameter("logout");
-
-   
-
-       
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
      * methods.
